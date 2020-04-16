@@ -85,11 +85,11 @@
             > a + div .nav li > a{
                 margin-top: 7px;
             }
-
+              /*Sidebar Link color*/
             > a{
                 margin: 10px 15px 0;
                 border-radius: $btn-round-radius;
-                color: $white-color;
+                color: $black-color;
                 display: block;
                 text-decoration: none;
                 position: relative;
@@ -112,13 +112,14 @@
                   color: $white-color;
                 }
             }
-
+            
+            /*Sidebar Icon Colors*/
             &.active > a,
             &.active-pro > a{
               background-color: $white-color;
               box-shadow: $box-shadow;
               i{
-                color: $danger-color;
+                color: $social-facebook;
               }
             }
             :hover &.active-pro > a,
@@ -300,7 +301,7 @@
         }
 
         > li > a:focus{
-            background: rgba(255, 255, 255, 0.2);
+            background: $white-color;
         }
     }
 }
