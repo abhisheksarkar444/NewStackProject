@@ -89,7 +89,9 @@
             > a{
                 margin: 10px 15px 0;
                 border-radius: $btn-round-radius;
-                color: $black-color;
+                //color: $black-color;
+                // Author: Anshu, Date: April 16, 20
+                color: #d5d5d5;
                 display: block;
                 text-decoration: none;
                 position: relative;
@@ -131,6 +133,13 @@
                 color: $danger-color;
               }
             }
+        }
+
+        // Author: Anshu, Date: April 16, 20
+        li.active{
+          a{
+            color: #333;
+          }
         }
 
         p{
@@ -264,7 +273,9 @@
     }
 
     &:after{
-        @include icon-gradient($default-color);
+        //@include icon-gradient($default-color);
+        // Author: Anshu, Date: April 16, 20
+        background: #313131;
         z-index: 3;
     }
 
