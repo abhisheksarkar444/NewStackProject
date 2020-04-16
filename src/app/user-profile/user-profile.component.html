@@ -12,7 +12,8 @@
           <h5 class="title" style="color:#5781ff;">Heart Attack Predictor</h5>
         </div>
         <div class="card-body">
-          <form>
+
+          <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
             <div class="row">
 
               <div class="col-md-3 pr-1">
@@ -155,78 +156,11 @@
               </div>
               
             </div>
+
             <div  style="text-align: center;">
-              <button type="button" class="btn btn-info" data-toggle="modal" (click)="open(mymodal)">Calculate Now</button>
+              <button type="submit" class="btn btn-info" >Calculate Now</button>
+              <!-- data-toggle="modal" (click)="open(mymodal)" -->
             </div>
-
-<!-- Danger Modal -->      
-   
-<ng-template #mymodal let-modal>
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Heart Attack Predictor</h4>
-    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">×</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <b>
-      <span> We suggest you to have a consultation with a cardiologist at the earliest.</span>
-    </b>
-
-    <div class="card row">
-      <div class="col-lg-12">
-        <div class="card-body">
-          <div class="row">
-            <div class="col col-lg-3"> 
-              <div class="danger-type-msg">
-                Cholesterol
-              </div>
-            </div>
-            <div class="col col-lg-9">
-              <div class="danger-tips-title">
-                Tips
-              </div>
-              <div class="danger-tips-msg">
-                High Blood Cholesterol can be caused due to factors like smoking, an unhealthy diet and lack of exercise,
-                as well as having an underlying condition, such as high blood pressure or diabetes.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>     
-    </div>
-
-    <div class="card row">
-      <div class="col-lg-12">
-        <div class="card-body">
-          <div class="row">
-            <div class="col col-lg-3"> 
-              <div class="danger-tips-title">
-                Blood Sugar
-              </div>
-            </div>
-            <div class="col col-lg-9">
-              <div class="danger-tips-title">
-                Tips
-              </div>
-              <div class="danger-tips-msg">
-                Carbohydrates: Eating food containing too much carbohydrates, a form of sugar.                            
-                Blood sugar levels in patients with diabetes can rise within hours after eating.
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>     
-    </div>
-
-
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
-  </div>
-</ng-template>
 
             <!-- <div class="row">
               <div class="col-md-12">
@@ -243,45 +177,144 @@
     </div>
 
     
-    <!-- <div class="col-md-4">
-      <div class="card card-user">
-        <div class="image">
-          <img src="../assets/img/bg5.jpg" alt="...">
-        </div>
-        <div class="card-body">
-          <div class="author">
-            <a href="#">
-              <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
-              <h5 class="title">Mike Andrew</h5>
-            </a>
-            <p class="description">
-              michael24
-            </p>
-          </div>
-          <p class="description text-center">
-            "Lamborghini Mercy
-            <br> Your chick she so thirsty
-            <br> I'm in that two seat Lambo"
-          </p>
-        </div>
-        <hr>
-        <div class="button-container">
-          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-            <i class="fab fa-facebook-f"></i>
-          </button>
-          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-            <i class="fab fa-twitter"></i>
-          </button>
-          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
-            <i class="fab fa-google-plus-g"></i>
-          </button>
-        </div>
-      </div>
-    </div> -->
-
-   
   </div>
 
   
  
 </div>
+
+
+<ng-template #mymodal let-data let-ref="dialogRef">
+  <div>
+    <div>Heart Attack Predictor</div>
+    <div>
+      <div class="health-predictor-result-container">
+        <div class="predictor-result-success" *ngIf="isHeartOK; else dangerTemplate">
+          <div class="result-title"></div>
+          <div class="result-body">
+            <div class="predictor-result">
+              <div class="result-message">
+                <img src="../../../assets/images/heart-ok.png" alt="" class="result-image">
+                <div class="result-message-text">
+                  Congratulations! You are safe.
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="card-row row">
+
+                <div class="card-col col-lg-6">
+                  <div accent="info">
+                    <div>
+                      <div style="text-align: center;">
+                        Cholesterol
+                      </div>
+                    </div>
+                    <div>
+                      <div style="text-align: center;">
+                        174
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div accent="info">
+                    <div>
+                      <div style="text-align: center;">
+                        Blood Sugar
+                      </div>
+                    </div>
+                    <div>
+                      <div style="text-align: center;">
+                        120
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ng-template #dangerTemplate>
+        <div class="predictor-result-danger">
+          <div class="result-title"></div>
+          <div class="result-body">
+            <div class="predictor-result">
+              <div class="result-message">               
+                <div class="result-message-text">
+                  <div class="danger-message">
+                    <span> We suggest you to have a consultation with a cardiologist at the earliest.</span>
+                  </div>
+                  <div class="appointment-btn">
+                    
+                    <!-- TODO: Add a button below to Book and Appointment with Doctor -->
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="card-row row">
+
+                <div class="card-col col-lg-12">
+                  <div accent="info">                    
+                    <div>
+                      <div class="row">
+                        <div class="col col-lg-3"> 
+                          <div class="danger-type-msg">
+                            Cholesterol
+                          </div>
+                        </div>
+                        <div class="col col-lg-9">
+                          <div class="danger-tips-title">
+                            Tips
+                          </div>
+                          <div class="danger-tips-msg">
+                            High Blood Cholesterol can be caused due to factors like smoking, an unhealthy diet and lack of exercise,
+                            as well as having an underlying condition, such as high blood pressure or diabetes.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-12">
+                  <div accent="info">
+                    <div>
+
+                      <div class="row">
+                        <div class="col col-lg-3"> 
+                          <div class="danger-tips-title">
+                            Blood Sugar
+                          </div>
+                        </div>
+                        <div class="col col-lg-9">
+                          <div class="danger-tips-title">
+                            Tips
+                          </div>
+                          <div class="danger-tips-msg">
+                            Carbohydrates: Eating food containing too much carbohydrates, a form of sugar.                            
+                            Blood sugar levels in patients with diabetes can rise within hours after eating.
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+      </div>
+    </div>
+    <div>
+      <button nbButton (click)="ref.close()">Close</button>
+    </div>
+  </div>
+</ng-template>
