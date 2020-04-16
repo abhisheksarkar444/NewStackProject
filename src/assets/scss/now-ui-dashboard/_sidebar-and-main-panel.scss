@@ -241,7 +241,10 @@
             display: block;
             white-space: nowrap;
             font-size: $font-size-large;
-            color: $white-color;
+            // color: $white-color;
+            // Author: Anshu, Date: April 16th, 20
+            // Description: Changes the color of the logo in the sidebar
+            color: #5781ff;
             text-decoration: none;
             font-weight: $font-weight-normal;
             line-height: 30px;
