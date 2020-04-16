@@ -1,89 +1,179 @@
 <div class="panel-header panel-header-sm">
 </div>
+
+<!-- Author: Abhishek Sarkar
+     Date: 16-04-2020
+    Module: Heart Attack Predictor -->
 <div class="main-content">
   <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
       <div class="card">
         <div class="card-header">
-          <h5 class="title">Edit Profile</h5>
+          <h5 class="title" style="color:#5781ff;">Heart Attack Predictor</h5>
         </div>
         <div class="card-body">
           <form>
             <div class="row">
-              <div class="col-md-5 pr-1">
+
+              <div class="col-md-3 pr-1">
                 <div class="form-group">
-                  <label>Company (disabled)</label>
-                  <input type="text" class="form-control" disabled="" placeholder="Company" value="Creative Code Inc.">
+                  <label>What's your age group?</label>
+                  <input type="text" class="form-control" placeholder="Eg: 32" value="Eg: 32">
+                </div>
+              </div>
+
+              <div class="col-md-3 px-1">
+                <div class="form-group">                
+                    <label class="col-form-label  pt-0">Gender</label>                 
+                    <div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="gridRadios" id="genRadio1" value="option1" checked>
+                        <label class="custom-control-label" for="genRadio1">
+                          Male
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="gridRadios" id="genRadio2" value="option1" >
+                        <label class="custom-control-label" for="genRadio2">
+                          Female
+                        </label>
+                      </div>
+                    </div>
                 </div>
               </div>
               <div class="col-md-3 px-1">
-                <div class="form-group">
-                  <label>Username</label>
-                  <input type="text" class="form-control" placeholder="Username" value="michael23">
+                <div class="form-group">                
+                    <label class="col-form-label  pt-0">Do you experience chest pain?</label>                 
+                    <div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="chestRadios" id="chestRadio1" value="option1" checked>
+                        <label class="custom-control-label" for="chestRadio1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="chestRadios" id="chestRadio2" value="option1" >
+                        <label class="custom-control-label" for="chestRadio2">
+                          No
+                        </label>
+                      </div>
+                    </div>
                 </div>
               </div>
-              <div class="col-md-4 pl-1">
+              <div class="col-md-3 pl-1">
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input name="email" id="email" type="email" class="form-control" placeholder="Email">
+                  <label>Blood Pressure level</label>
+                  <input type="text" class="form-control" placeholder="Eg: 110" value="">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3 pr-1">
+                <div class="form-group">
+                  <label>Cholesterol level</label>
+                  <input type="text" class="form-control" placeholder="Eg: 140" value="">
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label>Fasting blood sugar level</label>
+                  <input type="text" class="form-control" placeholder="Eg: 323" value="">
+                </div>
+              </div>
+              <div class="col-md-3 px-1">
+                <div class="form-group">                
+                    <label class="col-form-label  pt-0">Resting electrocardiograph?</label>                 
+                    <div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="restRadios" id="restRadio1" value="option1" checked>
+                        <label class="custom-control-label" for="restRadio1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="restRadios" id="restRadio2" value="option1" >
+                        <label class="custom-control-label" for="restRadio2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label>Maximum heart rate achieved</label>
+                  <input type="text" class="form-control" placeholder="Eg: 323" value="">
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3 pr-1">
+                <div class="form-group">                
+                    <label class="col-form-label  pt-0">Exercise include angina</label>                 
+                    <div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="exeRadios" id="exeRadio1" value="option1" checked>
+                        <label class="custom-control-label" for="exeRadio1">
+                          Yes
+                        </label>
+                      </div>
+                      <div class="custom-control custom-radio custom-control-inline">
+                        <input class="custom-control-input" type="radio" name="exeRadios" id="exeRadio2" value="option1" >
+                        <label class="custom-control-label" for="exeRadio2">
+                          No
+                        </label>
+                      </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label>Depression induced by exercise</label>
+                  <input type="text" class="form-control" placeholder="Enter in range 0-10" value="">
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label>Slope of the peak exercise</label>
+                  <input type="text" class="form-control" placeholder="Enter in range 0-10" value="">
+                </div>
+              </div>
+              <div class="col-md-3 pl-1">
+                <div class="form-group">
+                  <label>Vessels coloured by flourosopy</label>
+                  <input type="text" class="form-control" placeholder="Enter in range 0-3" value="">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-md-6 pr-1">
                 <div class="form-group">
-                  <label>First Name</label>
-                  <input type="text" class="form-control" placeholder="Company" value="Mike">
+                  <label>Thalassemia level</label>
+                  <input type="text" class="form-control" placeholder="3=Normal, 6= Fixed defect, 7= reversible defect" value="">
                 </div>
               </div>
-              <div class="col-md-6 pl-1">
-                <div class="form-group">
-                  <label>Last Name</label>
-                  <input type="text" class="form-control" placeholder="Last Name" value="Andrew">
-                </div>
-              </div>
+              
             </div>
-            <div class="row">
-              <div class="col-md-12">
-                <div class="form-group">
-                  <label>Address</label>
-                  <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09">
-                </div>
-              </div>
+            <div  style="text-align: center;">
+              <button type="button" class="btn btn-info">Calculate Now</button>
             </div>
-            <div class="row">
-              <div class="col-md-4 pr-1">
-                <div class="form-group">
-                  <label>City</label>
-                  <input type="text" class="form-control" placeholder="City" value="Mike">
-                </div>
-              </div>
-              <div class="col-md-4 px-1">
-                <div class="form-group">
-                  <label>Country</label>
-                  <input type="text" class="form-control" placeholder="Country" value="Andrew">
-                </div>
-              </div>
-              <div class="col-md-4 pl-1">
-                <div class="form-group">
-                  <label>Postal Code</label>
-                  <input type="number" class="form-control" placeholder="ZIP Code">
-                </div>
-              </div>
-            </div>
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-12">
                 <div class="form-group">
                   <label>About Me</label>
                   <textarea rows="4" cols="80" class="form-control" placeholder="Here can be your description" value="Mike">Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</textarea>
                 </div>
               </div>
-            </div>
+            </div> -->
+            
           </form>
         </div>
       </div>
     </div>
-    <div class="col-md-4">
+
+    
+    <!-- <div class="col-md-4">
       <div class="card card-user">
         <div class="image">
           <img src="../assets/img/bg5.jpg" alt="...">
@@ -117,6 +207,6 @@
           </button>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
