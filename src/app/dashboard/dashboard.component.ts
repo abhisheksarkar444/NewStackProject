@@ -266,13 +266,13 @@ export class DashboardComponent implements OnInit {
       ];
     this.lineChartGradientsNumbersColors = [
      {
-       backgroundColor: this.gradientFill,
+       backgroundColor: "#5781ff",
        borderColor: "#2CA8FF",
        pointBorderColor: "#FFF",
        pointBackgroundColor: "#2CA8FF",
      }
    ];
-    this.lineChartGradientsNumbersLabels = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    this.lineChartGradientsNumbersLabels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     this.lineChartGradientsNumbersOptions = {
         maintainAspectRatio: false,
         legend: {
