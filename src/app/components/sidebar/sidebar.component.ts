@@ -12,7 +12,7 @@ declare interface RouteInfo {
 //Sidemenu links modified
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/dashboard', title: 'Dashboard',  icon: 'fa fa-chart-line', class: '' },
+    { path: '/dashboard', title: 'Dashboard',  icon: 'fa fa-chart-pie', class: '' },
     { path: '/user-profile', title: 'Health Predictor',  icon:'far fa-heart', class: '' },
 
     // { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
