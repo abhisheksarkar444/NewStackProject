@@ -15,6 +15,10 @@ export const ROUTES: RouteInfo[] = [
     { path: '/dashboard', title: 'Dashboard',  icon: 'fa fa-chart-pie', class: '' },
     { path: '/user-profile', title: 'Health Predictor',  icon:'fas fa-heart', class: '' },
 
+    //TODO: Add the Settings Link
+    //Icon Class Required: 'fas fa-cogs'
+    { path: '/typography', title: 'Settings',  icon:'fas fa-cogs', class: '' },
+
     // { path: '/icons', title: 'Icons',  icon:'education_atom', class: '' },
     // { path: '/maps', title: 'Maps',  icon:'location_map-big', class: '' },
     // { path: '/notifications', title: 'Notifications',  icon:'ui-1_bell-53', class: '' },

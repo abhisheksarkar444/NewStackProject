@@ -26,6 +26,8 @@
           <form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()">
             <div class="row">
 
+            <!-- TODO: Add a tootip for Age  -->
+            <!-- TODO: Change the input type of age to a number field -->
               <div class="col-md-3 pr-4">
                 <div class="form-group">
                   <label>What's your age?</label>
@@ -80,6 +82,7 @@
                 <div class="form-group">
                   <label>
                     Blood Pressure level
+                    <!-- TODO: Add Tooltip for the Blood Pressure -->
                     <span class="badge badge-pill badge-secondary" ngbTooltip="Blood pressure is one of the vital signs, along with respiratory rate, heart rate, oxygen saturation, and body temperature. Can be measured in mmHg" >i</span>                    
                   </label>
    
@@ -198,6 +201,7 @@
               <div class="col-md-3 pr-4">
                 <div class="form-group">
                     <label>Thalassemia level
+                        <!-- TODO: Add Tooltip for the Thalassemia Level -->
                         <span class="badge badge-pill badge-secondary" ngbTooltip="Thalassemia is an inherited blood disorder in which the body makes an abnormal form of hemoglobin results in excessive destruction of red blood cells" >i</span>
                     </label>
                   <input type="text" class="form-control" name="" placeholder="1-3"
@@ -369,7 +373,7 @@
 
             <div class="appointment-btn">
               <!-- TODO: Add a button below to Book and Appointment with Doctor 👨‍⚕️👩‍⚕️🩺-->
-              <a href="https://www.practo.com" class="btn btn-success" target="_blank">
+              <a href="https://www.practo.com" class="btn btn-info" target="_blank">
                 Book Appointment
               </a>
             </div>
