@@ -2,3 +2,7 @@
 ::ng-deep .tooltip-inner {
     background-color: #5781ff !important;
 }
+
+::ng-deep .bs-tooltip-top .arrow:before {   
+    border-top-color: #5781ff;
+}
