@@ -201,7 +201,7 @@
 
   .result-message-text .danger-message {
     font-weight: bold;
-    color: black;
+    color: #e95e38;
     padding: 20px 0px;
   }
 
@@ -209,6 +209,16 @@
     border-left: 0.5px solid rgba(0, 0, 0, 0.5);
     font-size: 12px;
     padding: 5px;
+  }
+
+  .result-danger-message i {
+    font-size: 100px;
+    color: #e95e38;
+  }
+
+  .result-success-message i{
+    font-size: 200px; 
+    color:#00D68D;
   }
 
   .danger-type-msg {
@@ -223,8 +233,13 @@
     border-top: solid 5px #5781ff;
   }
 
-  .predictor-result {
+  /* .predictor-result {
     margin-bottom: 40px;
+  } */
+
+  .appointment-btn {
+    margin-bottom: 40px;
+    text-align: center;
   }
 </style>
 
@@ -247,8 +262,9 @@
         <div class="result-body">
 
           <div class="predictor-result">
-            <div class="result-message">
-              <img src="../../assets/img/heart-ok.png" alt="" class="result-image">
+            <div class="result-message result-success-message" style="text-align: center;">
+              <!-- <img src="../../assets/img/heart-ok.png" alt="" class="result-image"> -->
+              <i class="fas fa-check-circle"></i>
               <div class="result-message-text">
                 Congratulations! You are safe.
               </div>
@@ -295,21 +311,24 @@
           <div class="result-title"></div>
           <div class="result-body">
             <div class="predictor-result">
-              <div class="result-message">
+              <div class="result-message result-danger-message" style="text-align: center;">
+
+                <i class="fas fa-exclamation-triangle"></i>
+
                 <div class="result-message-text">
                   <div class="danger-message">
                     <span> We suggest you to have a consultation with a cardiologist at the earliest.</span>
                   </div>
-                  <div class="appointment-btn">
-
-                    <!-- TODO: Add a button below to Book and Appointment with Doctor -->
-                    <a href="https://www.practo.com" class="btn btn-success" target="_blank">
-                      Book Appointment
-                    </a>
-
-                  </div>
                 </div>
+
               </div>
+            </div>
+
+            <div class="appointment-btn">
+              <!-- TODO: Add a button below to Book and Appointment with Doctor 👨‍⚕️👩‍⚕️🩺-->
+              <a href="https://www.practo.com" class="btn btn-success" target="_blank">
+                Book Appointment
+              </a>
             </div>
 
             <div>
