@@ -9,9 +9,13 @@ import Chart from 'chart.js';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
+//   Author : Sharath
 export class NavbarComponent implements OnInit {
     private listTitles: any[];
     location: Location;
+  //   Author : Sharath
+  // Apr 17 2020
+  redirectionPath:any="";
       mobile_menu_visible: any = 0;
     private toggleButton: any;
     private sidebarVisible: boolean;
@@ -141,7 +145,7 @@ export class NavbarComponent implements OnInit {
 
         }
     };
-
+//   Author : Sharath
     getTitle(){
       var titlee = this.location.prepareExternalUrl(this.location.path());
       if(titlee.charAt(0) === '#'){
@@ -151,9 +155,10 @@ export class NavbarComponent implements OnInit {
 
       for(var item = 0; item < this.listTitles.length; item++){
           if(this.listTitles[item].path === titlee){
+            this.redirectionPath=this.listTitles[item].path;
               return this.listTitles[item].title;
           }
-          
+          console.log(this.listTitles[item])
       }
       
       //return 'Dashboard';
