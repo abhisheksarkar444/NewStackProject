@@ -1,0 +1,27 @@
+.percentageCss-positive{
+    color: #00d68f !important;
+    font-weight: bold !important;
+}
+
+.percentageCss-negative{
+    color: #ff3d71 !important;
+    font-weight: bold !important;
+}
+
+
+.font-css{
+    color: #192038;
+    font-family: Open Sans,sans-serif;
+    /* font-size: .9375rem; */
+    font-weight: 400;
+    line-height: 1.25rem;
+    font-size: larger;
+}
+
+.hidden-overflow{
+    overflow: hidden;
+}
+
+.width-30{
+    width: 30% !important;
+}
